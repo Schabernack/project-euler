@@ -1,8 +1,8 @@
 import math
 
 which_prime = 10001
-prime_no = 0
-i = 2
+prime_no = 1
+i = 3
 
 while prime_no < which_prime:
     is_prime = True
@@ -14,7 +14,7 @@ while prime_no < which_prime:
         prime_no = prime_no+1
     if prime_no==which_prime:
         break
-    i = i+1
+    i = i+2
 
 
 print i

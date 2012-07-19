@@ -9,8 +9,7 @@ is_prime = [True] * (last_nbr+1)
 
 
 for i in range(2,len(is_prime)):
-    for k in range(2,(last_nbr/i)+1):
-        #print i, "   ", k
+    for k in range(i,(last_nbr/i)+1):
         is_prime[i*k]=False
 
 is_prime[0]=False

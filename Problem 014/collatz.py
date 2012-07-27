@@ -28,7 +28,6 @@ if __name__ == "__main__":
 
         for k in seq(i):
             len_seq+=1
-            #print k
             if str(k) in lengthdic:
                 len_seq += lengthdic[str(k)]
                 break

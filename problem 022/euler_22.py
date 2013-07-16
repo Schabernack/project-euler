@@ -3,7 +3,10 @@
 from urllib import urlopen
 from pprint import pprint
 
-names = urlopen("http://projecteuler.net/project/names.txt").read()
+#names = urlopen("http://projecteuler.net/project/names.txt").read()
+names = ''
+with open("names.txt") as f:
+    names = f.read()
 
 names = names.replace("\"","")
 names = names.split(',')

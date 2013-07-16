@@ -14,7 +14,6 @@ def main():
 def get_divisors(number):
     dset = Set()
     div = []
-    lim = (number/2)+1
     lim = int(math.sqrt(number))+1
     for i in range(1,lim):
         if number % i == 0:

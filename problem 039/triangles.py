@@ -1,25 +1,27 @@
 #!/usr/bin/env python
-
+import time
 
 def get_triangle_lengths(perimeter):
   results = []
-  for a in xrange(1,perimeter+1):
-    for b in xrange(1,perimeter+1):
-      for c in xrange(1,perimeter+1):
-        if a+b+c==perimeter  and  (a**2 + b**2 == c**2):
-          res = sorted([a,b,c])
-          if not res in results:
-            results.append(res)
+  for x in xrange(perimeter-2,0,-1):
+    for y in xrange(perimeter-2):
+      z = perimeter - x - y
+      if x>=y>=z>0:
+        if (x**2 + y**2 == z**2) or (x**2 + z**2 == y**2) or (y**2 + z**2 == x**2):
+          results.append([x,y,z])
   return results
 
 
-
+t0 = time.clock()
+print get_triangle_lengths(120)
+print time.clock()-t0
 
 maxp = 0
 maxsolutions = 0
 
-for p in xrange(492,1000):
-  print p
+
+
+for p in xrange(1,1000):
   sides = get_triangle_lengths(p)
   if len(sides) > maxsolutions:
     maxp = p
